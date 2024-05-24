@@ -13,3 +13,4 @@ Cập nhật bộ kiểm tra để mong đợi mã trạng thái phản hồi ch
 Cập nhật bộ kiểm tra để mong đợi tên bài kiểm tra không được xác định.
 5. Kết luận
 Bộ kiểm tra hiện tại có một số lỗi có thể ảnh hưởng đến tính chính xác của báo cáo được tạo. Các lỗi này cần được sửa chữa trước khi bộ kiểm tra có thể được sử dụng trong môi trường sản xuất.
+
