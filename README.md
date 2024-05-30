@@ -1,18 +1,23 @@
 # postman
-Dưới đây là các lỗi được phát hiện trong bộ kiểm tra:
++ Mục đích:Báo cáo này nhằm mục đích tóm tắt kết quả của các bài kiểm thử được thực hiện trên trang web https://reqres.in/api/users?page=2 bằng công cụ Postman.
+  ![image](https://github.com/21012064-BuiThiNgocHuyen/postman/assets/124747527/8f13f342-45c2-4f1e-b036-8be7f8e0422f)
 
-Lỗi 1: Mã trạng thái phản hồi không chính xác.
-Chi tiết: Bộ kiểm tra mong đợi mã trạng thái phản hồi là "Tạo thành công" nhưng nhận được "OK".
-Hậu quả: Báo cáo có thể không được tạo chính xác.
-Lỗi 2: Tên bài kiểm tra không chính xác.
-Chi tiết: Bộ kiểm tra mong đợi tên bài kiểm tra không được xác định nhưng nhận được giá trị "100".
-Hậu quả: Báo cáo có thể không được tạo chính xác.
-
-2. Đề xuất
-Dựa trên các phát hiện được trình bày ở trên, tôi đề xuất các giải pháp sau:
-Cập nhật bộ kiểm tra để mong đợi mã trạng thái phản hồi chính xác là "Tạo thành công".
-Cập nhật bộ kiểm tra để mong đợi tên bài kiểm tra không được xác định.
-
-3. Kết luận
-Bộ kiểm tra hiện tại có một số lỗi có thể ảnh hưởng đến tính chính xác của báo cáo được tạo. Các lỗi này cần được sửa chữa trước khi bộ kiểm tra có thể được sử dụng trong môi trường sản xuất.
-
++ Báo cáo này bao gồm các bài kiểm thử sau:
+  Kiểm tra trạng thái HTTP
+  Kiểm tra nội dung phản hồi
+  Kiểm tra thời gian phản hồi
+Yêu cầu: GET https://reqres.in/api/users?page=2
++ Kiểm tra trạng thái HTTP:
+  Kết quả mong đợi: 200 OK
+  Kết quả thực tế: 200 OK
+->Kết luận: Yêu cầu thành công.
++ Kiểm tra nội dung phản hồi:
+ 1. Kết quả mong đợi: Phản hồi JSON chứa tên người dùng "Michael" có trong phần body.
+  Kết quả thực tế: Phản hồi JSON chứa tên người dùng "Michael" có trong phần body.
+ 2. Kết quả mong đợi: Phản hồi JSON chứa value ="12" với thuộc tính "total"
+  Kết quả thực tế:Phản hồi JSON chứa value ="12" với thuộc tính "total"
+->Kết luận: Nội dung phản hồi chính xác.
++ Kiểm tra thời gian phản hồi:
+  Thời gian phản hồi trung bình: 360 ms
+->Kết luận: Thời gian phản hồi chấp nhận được.
++ Kết luận: Tất cả các bài kiểm thử đều thành công. Trang web https://reqres.in/api/users?page=2 hoạt động bình thường.
